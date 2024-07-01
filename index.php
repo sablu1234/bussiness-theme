@@ -1,19 +1,42 @@
 <?php
 
-// $home =0;
-// while($home<10){
-//     echo $home;
-//     $home++;
+// $count= 1;
+// while ($count<=5) {
+// echo "hello, $count<br>";
+// $count+=2;
 // }
-$all_post= wp_count_posts()->publish;
-echo $all_post;
-// echo wp_count_posts()->publish;
 
 
-
-$moga=$all_post;
-while($moga<10){
-    echo $moga;
-    $moga++;
-}
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="#">
+<select name="" id="">
+
+
+
+
+
+<?php
+$year= 2000;
+while($year<2005){
+   echo "<option value='$year'>$year</option>";
+    $year++;
+}
+
+?>
+
+
+</select>
+
+</form>
+
+
+</body>
+</html>
