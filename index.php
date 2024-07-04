@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo get_parent_theme_file_uri('assets/css/squarely.css');?>">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/squarely.css')?>">
     <!--common.css  -->
-      <link rel="stylesheet" href="css/common.css">
+      <link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/common.css')?>">
     <title>Business Templates!</title>
   </head>
   <body>
@@ -18,14 +18,25 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+<?php 
+// $age= 27;
+// if($age<18){
+//   echo "you are voter";
+// }
+// else{
+//   echo "you are baby";
+// }
+
+
+?>
+
+
+
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home 
-
-            <?php echo get_parent_theme_file_uri('')?>   
-
-            <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -40,7 +51,7 @@
       </div>
     </nav>
 
-    <div class="hero-header" style="background-image: url('<?php echo get_parent_theme_file_uri('assets/img/business.jpg');?>'); background-repeat: repeat-y;">
+    <div class="hero-header" style="background-image: url('<?php echo get_theme_file_uri('assets/img/business.jpg')?>')">
         <div class="header">
             <h1>Busines Name or Heading</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut cum cupiditate distinctio.</p>
@@ -58,7 +69,7 @@
                 <a href="#" class="btn btn-primary">Make a Phone call</a>
             </div>
             <div class="col-md-4 align-items-center d-md-flex">
-                <img class="img-fluid" src="<?php echo get_parent_theme_file_uri('assets/img/girl.jpg');?>" alt="lapi_girl">
+                <img class="img-fluid" src="<?php echo get_theme_file_uri('assets/img/girl.jpg')?>" alt="lapi_girl">
             </div>
         </div>
     </div>
@@ -68,17 +79,15 @@
         <div class="row bg-light p-md-5">
 
 <?php 
-
-
-while ( have_posts() ) : the_post();
+while (have_posts()):the_post();
 ?>
+
 <div class="col-md-4 mb-3">
                 <div class="card">
-                 <?php  the_post_thumbnail();?>
-                    <img class="card-img-top" src="<?php echo get_parent_theme_file_uri('assets/img/1.jpg');?>" alt="">
+                    <img class="card-img-top" src="<?php echo get_theme_file_uri('assets/img/1.jpg')?>" alt="">
                     <div class="card-body">
-                        <h3><?php the_title();?></h3>
-                        <p><?php the_content();?></p>
+                        <h3><?php the_title('hasan ')?></h3>
+                        <p><?php The_content('hasan ')?></p>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-primary">Find out more!!</button>
@@ -90,8 +99,8 @@ endwhile;
 
 ?>
 
-            
-            
+
+
         </div>
     </div>
 
