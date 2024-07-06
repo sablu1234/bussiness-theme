@@ -84,13 +84,24 @@ while (have_posts()):the_post();
 
 <div class="col-md-4 mb-3">
                 <div class="card">
+                  <?php 
+                  if(has_post_thumbnail()){
+                    the_post_thumbnail('thumbnail',array('class'=>'card-img-top'));
+                  }
+                  else{
+                    ?>
                     <img class="card-img-top" src="<?php echo get_theme_file_uri('assets/img/1.jpg')?>" alt="">
+                    <?php
+                  }
+                  
+                 ?>
+                    <!-- <img class="card-img-top" src="<?php echo get_theme_file_uri('assets/img/1.jpg')?>" alt=""> -->
                     <div class="card-body">
                         <h3><?php the_title('hasan ')?></h3>
                         <p><?php The_content('hasan ')?></p>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary">Find out more!!</button>
+                       <a class="btn btn-primary" href="<?php the_permalink();?>">Find out more!!</a>
                     </div>
                 </div>
             </div>
