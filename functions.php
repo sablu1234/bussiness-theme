@@ -12,4 +12,28 @@ if(!function_exists('mytheme')){
 
 }
 add_action('after_setup_theme','mytheme');
+
+
+
+
+
+
+
+
+
+if(!function_exists('mystdinfo')){
+    function mystdinfo() {
+        register_post_type('wporg_product',
+            array(
+                'labels'      => array(
+                    'name'          => __('Products', 'textdomain'),
+                    'singular_name' => __('Product', 'textdomain'),
+                ),
+                    'public'      => true,
+                    'has_archive' => true,
+            )
+        );
+    }
+}
+add_action('init', 'mystdinfo');
 ?>
