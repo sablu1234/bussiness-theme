@@ -79,6 +79,39 @@
         <div class="row bg-light p-md-5">
 
 <?php 
+
+// $info=array('d',6465464,"hadi",64646);
+// echo count($info);
+// echo $info[0];
+
+
+// key= value
+
+// key => value
+
+
+$personinfo=array(
+  'key'=>'value',
+  'name'=>'hadi jaman',
+  'childinfo'=>array(
+    'c_name'=>"rowza",
+  )
+);
+// var_dump($personinfo);
+echo $personinfo['childinfo']['c_name'];
+
+// while()
+$i=0;
+$slno=0;
+for($taka=0;$taka<100000;$taka+=10000){
+  $slno++;
+  echo $taka."<br>";
+}
+echo $slno;
+
+
+
+
 if(have_posts()):
 
 
