@@ -101,13 +101,23 @@ $personinfo=array(
 echo $personinfo['childinfo']['c_name'];
 
 // while()
-$i=0;
-$slno=0;
-for($taka=0;$taka<100000;$taka+=10000){
-  $slno++;
-  echo $taka."<br>";
-}
-echo $slno;
+// $i=0;
+// $slno=0;
+// for(){
+//   $slno++;
+//   echo $taka."<br>";
+// }
+
+
+// $taka=0;
+// while($taka<100000){
+//   $taka+=5464;
+// }
+
+
+
+
+
 
 
 
