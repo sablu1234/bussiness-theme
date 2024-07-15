@@ -80,59 +80,25 @@
 
 <?php 
 
-// $info=array('d',6465464,"hadi",64646);
-// echo count($info);
-// echo $info[0];
-
-
-// key= value
-
-// key => value
-
-
-$personinfo=array(
-  'key'=>'value',
-  'name'=>'hadi jaman',
-  'childinfo'=>array(
-    'c_name'=>"rowza",
+$the_client=new wp_query(
+  array(
+    'post_type'=>array('wporg_product')
   )
 );
-// var_dump($personinfo);
-echo $personinfo['childinfo']['c_name'];
-
-// while()
-// $i=0;
-// $slno=0;
-// for(){
-//   $slno++;
-//   echo $taka."<br>";
-// }
-
-
-// $taka=0;
-// while($taka<100000){
-//   $taka+=5464;
-// }
 
 
 
+if($the_client->have_posts()):
 
 
-
-
-
-
-if(have_posts()):
-
-
-while (have_posts()):the_post();
+while ($the_client->have_posts()):$the_client->the_post();
 ?>
 
 <div class="col-md-4 mb-3">
                 <div class="card">
                   <?php 
                   if(has_post_thumbnail()){
-                    the_post_thumbnail('thumbnail',array('class'=>'card-img-top'));
+                    the_post_thumbnail('medium',array('class'=>'card-img-top'));
                   }
                   else{
                     ?>

@@ -14,11 +14,11 @@ if(!function_exists('mystdinfo')){
                     'supports'           => array('title', 'editor', 'author', 'thumbnail',),
                     'labels'=> array(
 
-                        'singular_name'         => _x( 'srudet Type', 'Post Type Singular Name' ),
-                        'menu_name'             => __( 'All girl friends name' ),
+                        'singular_name'         => _x( 'Team member', 'Post Type Singular Name' ),
+                        'menu_name'             => __( 'All girl friends info' ),
                         'name_admin_bar'        => __( 'Post Type' ),
-                        'add_new'               => ('Add New girld friend name'),
-                        'not_found'             => ('Not found girl'),
+                        'add_new'               => ('Add New girld friends name'),
+                        'not_found'             => ('Not found any girl'),
                         'set_featured_image'    => ('Set Girl friend image'),
                     )
             )

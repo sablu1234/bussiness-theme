@@ -13,6 +13,7 @@ add_action('after_setup_theme','mytheme');
 
 
 require_once('inc/custompost/client.php');
+require_once('inc/custompost/team.php');
 
 
 
